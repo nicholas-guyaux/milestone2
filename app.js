@@ -21,88 +21,35 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-// for your routes to know where to know if there is param _method DELETE
-// it will change the req.method to DELETE and know where to go by setting
-// your req.url path to the regular path without the parameters
-app.use( function( req, res, next ) {
-  if (req.query._method == 'DELETE') {
-    req.method = 'DELETE';
-    req.url = req.path;
-  }
-  next();
-});
-
 // gettting all the blogs
-app.get('/scores/scores', function(req, res, next){
-  db.any('SELECT * FROM scores')
-    .then(function(data){
-      return res.render('scores', {scores: data})
-    })
-    .catch(function(err){
-      return next(err);
-    });
+app.get('/', function(req, res, next){
+
 });
 
-//add new blog
-app.get('/scores/login', function(req, res, next){
-  res.render('new');
+//play the game
+app.get('/scores/game', function(req, res, next){
+  res.render('game');
 });
 
-app.post('/scores/new', function(req, res, next){
-  db.none('insert into blogs(title, blogdate, entry)' +
-     'values(${title}, ${blogdate}, ${entry})',
+app.post('/scores/game', function(req, res, next){
+  db.none('insert into scores(name, score)' +
+     'values(${name}, ${score})',
    req.body)
    .then(function () {
-     res.redirect('/');
+     res.redirect('/scores/scores');
    })
    .catch(function (err) {
      return next(err);
    });
 });
 
-// edit blogs
-app.get('/blogs/:id/edit', function(req, res, next){
-  var id = parseInt(req.params.id);
-  db.one('select * from blogs where id = $1', id)
-    .then(function (blog) {
-      res.render('edit', {blog: blog})
+// gettting all the scores
+app.get('/scores/scores', function(req, res, next){
+  db.any('SELECT * FROM scores')
+    .then(function(data){
+      return res.render('scores', {scores: data})
     })
-    .catch(function (err) {
-      return next(err);
-    });
-});
-
-app.post('/blogs/:id/edit', function(req, res, next){
-  db.none('update blogs set title=$1, blogdate=$2, entry=$3 where id=$4',
-    [req.body.title, req.body.blogdate, req.body.entry, parseInt(req.params.id)])
-    .then(function () {
-      res.redirect('/');
-    })
-    .catch(function (err) {
-      return next(err);
-    });
-});
-
-//show blog
-app.get('/scores/:id/', function(req, res, next){
-  var id = parseInt(req.params.id);
-  db.one('select * from blogs where id = $1', id)
-    .then(function (blog) {
-      res.render('show', {blog: blog})
-    })
-    .catch(function (err) {
-      return next(err);
-    });
-});
-
-//delete blogs
-app.delete('/blogs/:id', function(req, res, next){
-  var id = parseInt(req.params.id);
-  db.result('delete from blogs where id = $1', id)
-    .then(function (result) {
-      res.redirect('/');
-    })
-    .catch(function (err) {
+    .catch(function(err){
       return next(err);
     });
 });
