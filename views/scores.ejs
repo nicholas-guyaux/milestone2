@@ -8,22 +8,23 @@
   <body>
     <div class="container">
       <h1>High Scores</h1>
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Score</th>
-        </tr>
-        <% scores.forEach(function(game){ %>
-          <tr>
-            <td><%= game.name %></td>
-            <td><%= game.score %></td>
-          </tr>
-        <% }); %>
-      </table>
       <form class="" action="/retry" method="get">
-        <input type="submit" value="Retry" />
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
+          </tr>
+          <% scores.forEach(function(game){ %>
+            <tr>
+              <td><%= game.name %></td>
+              <td><%= game.score %></td>
+            </tr>
+          <% }); %>
+        </table>
+        <p>
+          <input type="submit" value="Retry" />
+        </p>
       </form>
-
     </div>
   </body>
 </html>
