@@ -2,28 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Blog Posts</title>
+    <title>Login</title>
   </head>
   <body>
     <div class="container">
-      <h1>Blog List</h1>
-      <a href="/blogs/new">Add Blog</a>
-      <table>
-        <tr>
-          <th>Title</th>
-          <th>Date</th>
-          <th>Entry</th>
-        </tr>
-        <% blogs.forEach(function(blog){ %>
-          <tr>
-            <td><a href='/blogs/<%=blog.id %>'><%= blog.title %></a></td>
-            <td><%= blog.blogdate %></td>
-            <td><%= blog.entry %></td>
-            <td><a href='/blogs/<%=blog.id %>/edit'>Edit</a></td>
-            <td><a href='/blogs/<%=blog.id %>?_method=DELETE'>Delete</a></td>
-          </tr>
-        <% }); %>
-      </table>
+      <h1>Name</h1>
+      <form class="" action="/scores/login" method="post">
+        <input type="text" name="name" value="" placeholder="Enter Name" />
+        <input type="submit" value="Play" />
+      </form>
     </div>
   </body>
 </html>
