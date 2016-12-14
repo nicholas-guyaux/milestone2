@@ -21,9 +21,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-// gettting all the blogs
+// get the username
 app.get('/', function(req, res, next){
-
+  res.render('index');
 });
 
 //play the game

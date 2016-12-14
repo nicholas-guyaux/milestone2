@@ -1,4 +1,4 @@
-// 1. Ask the user at least four questions and get their input
+// 1. Ask the user 20 questions and get their input and store as score
 document.getElementById("quiz-button").onclick = function() {checkAnswers()};
 
 function checkAnswers()
