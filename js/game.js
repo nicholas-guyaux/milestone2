@@ -1,13 +1,13 @@
 // 1. Ask the user 20 questions and get their input and store as score
-//document.getElementById("quiz-button").onclick = function() {checkAnswers()};
+document.getElementById("quiz-button").onclick = function() {checkAnswers()};
 
 checkAnswers = function(data)
 {
   // 2. Keep track of the number of questions that are answered correctly
-  var total = checkAnswer1(data) + checkAnswer2(data) + checkAnswer3(data) + checkAnswer4(data) + checkAnswer5(data)
-   + checkAnswer6(data) + checkAnswer7(data) + checkAnswer8(data) + checkAnswer9(data) + checkAnswer10(data)
-   + checkAnswer11(data) + checkAnswer12(data) + checkAnswer13(data) + checkAnswer14(data) + checkAnswer15(data)
-   + checkAnswer16(data) + checkAnswer17(data) + checkAnswer18(data) + checkAnswer19(data) + checkAnswer20(data);
+  var total = checkAnswer1() + checkAnswer2() + checkAnswer3() + checkAnswer4() + checkAnswer5()
+   + checkAnswer6() + checkAnswer7() + checkAnswer8() + checkAnswer9() + checkAnswer10()
+   + checkAnswer11() + checkAnswer12() + checkAnswer13() + checkAnswer14() + checkAnswer15()
+   + checkAnswer16() + checkAnswer17() + checkAnswer18() + checkAnswer19() + checkAnswer20();
 
   // 3. Write out a message to the user to let them know the number of questions that were correct
   alert("You answered " + total + " questions correctly.");
@@ -18,122 +18,122 @@ checkAnswers = function(data)
   return total;
 }
 
-function checkAnswer1(data)
+function checkAnswer1()
 {
-  if(data.q1c) return 1;
+  if(data.getElementById("q1c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer2(data)
+function checkAnswer2()
 {
-  if(data.q2b) return 1;
+  if(data.getElementById("q2b").checked) return 1;
   else return 0;
 }
 
-function checkAnswer3(data)
+function checkAnswer3()
 {
-  if(data.q3b) return 1;
+  if(data.getElementById("q3b").checked) return 1;
   else return 0;
 }
 
-function checkAnswer4(data)
+function checkAnswer4()
 {
-  if(data.q4b) return 1;
+  if(data.getElementById("q4b").checked) return 1;
   else return 0;
 }
 
-function checkAnswer5(data)
+function checkAnswer5()
 {
-  if(data.q5c) return 1;
+  if(data.getElementById("q5c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer6(data)
+function checkAnswer6()
 {
-  if(data.q6d) return 1;
+  if(data.getElementById("q6d").checked) return 1;
   else return 0;
 }
 
-function checkAnswer7(data)
+function checkAnswer7()
 {
-  if(data.q7a) return 1;
+  if(data.getElementById("q7a").checked) return 1;
   else return 0;
 }
 
-function checkAnswer8(data)
+function checkAnswer8()
 {
-  if(data.q8d) return 1;
+  if(data.getElementById("q8d").checked) return 1;
   else return 0;
 }
 
-function checkAnswer9(data)
+function checkAnswer9()
 {
-  if(data.q9a) return 1;
+  if(data.getElementById("q9a").checked) return 1;
   else return 0;
 }
 
-function checkAnswer10(data)
+function checkAnswer10()
 {
-  if(data.q10a) return 1;
+  if(data.getElementById("q10a").checked) return 1;
   else return 0;
 }
 
-function checkAnswer11(data)
+function checkAnswer11()
 {
-  if(data.q11c) return 1;
+  if(data.getElementById("q11c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer12(data)
+function checkAnswer12()
 {
-  if(data.q12d) return 1;
+  if(data.getElementById("q12d").checked) return 1;
   else return 0;
 }
 
-function checkAnswer13(data)
+function checkAnswer13()
 {
-  if(data.q13c) return 1;
+  if(data.getElementById("q13c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer14(data)
+function checkAnswer14()
 {
-  if(data.q14c) return 1;
+  if(data.getElementById("q14c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer15(data)
+function checkAnswer15()
 {
-  if(data.q15b) return 1;
+  if(data.getElementById("q15b").checked) return 1;
   else return 0;
 }
 
-function checkAnswer16(data)
+function checkAnswer16()
 {
-  if(data.q16c) return 1;
+  if(data.getElementById("q16c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer17(data)
+function checkAnswer17()
 {
-  if(data.q17a) return 1;
+  if(data.getElementById("q17a").checked) return 1;
   else return 0;
 }
 
-function checkAnswer18(data)
+function checkAnswer18()
 {
-  if(data.q18d) return 1;
+  if(data.getElementById("q18d").checked) return 1;
   else return 0;
 }
 
-function checkAnswer19(data)
+function checkAnswer19()
 {
-  if(data.q19c) return 1;
+  if(data.getElementById("q19c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer20(data)
+function checkAnswer20()
 {
-  if(data.q20d) return 1;
+  if(data.getElementById("q20d").checked) return 1;
   else return 0;
 }
