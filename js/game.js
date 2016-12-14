@@ -35,6 +35,7 @@ function checkAnswers()
   {
     var content = document.createTextNode("Ultimate failure");
   }
+
   theDiv.appendChild(content);
 }
 
