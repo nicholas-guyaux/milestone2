@@ -50,7 +50,7 @@ app.post('/game', function(req, res, next){
 
 // gettting all the scores
 app.get('/scores', function(req, res, next){
-  db.any('SELECT * FROM scores')
+  db.any('SELECT * FROM scores ORDER BY score DESC LIMIT 10')
     .then(function(data){
       return res.render('scores', {scores: data})
     })
