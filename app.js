@@ -34,7 +34,7 @@ app.get('/game', function(req, res, next){
 
 //play the game
 app.post('/game', function(req, res, next){
-  var quiz_scores = checkAnswers(req.body);
+  var quiz_scores = game.checkAnswers(req.body);
   db.none('insert into scores(name, score)' +
      'values(${req.body.username}, ${quiz_scores})')
    .then(function () {
