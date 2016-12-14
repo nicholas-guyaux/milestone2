@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var pgp = require('pg-promise')();
 var db = pgp(process.env.DATABASE_URL);
+var game = require('./js/game.js');
 
 var username;
 
@@ -30,14 +31,14 @@ app.get('/', function(req, res, next){
 
 app.get('/game', function(req, res, next){
   username = req.body.name;
-  res.render('game');
+  res.render('game', {username: username});
 });
 
 //play the game
 app.post('/scores/game', function(req, res, next){
+  var score = game.total(req.body);
   db.none('insert into scores(name, score)' +
-     'values(${username}, ${score})',
-     username + req.body.score)
+     'values(${req.body.username}, ${score})')
    .then(function () {
      res.redirect('/scores/scores');
    })

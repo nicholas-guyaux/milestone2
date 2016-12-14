@@ -14,29 +14,8 @@ function checkAnswers()
 
   // 4. Output a message to the element with a quiz-result id the user depending on their score
   //    All 5 correct: Complete Success
-  var theDiv = document.getElementById("quiz-result");
 
-  if(total == 5)
-  {
-    var content = document.createTextNode("Complete Success");
-  }
-  //    3-4 correct: Almost Good Enough
-  else if(total>=3)
-  {
-    var content = document.createTextNode("Almost Good Enough");
-  }
-  //    1-2 correct: Sitting on the Edge
-  else if(total>=1)
-  {
-    var content = document.createTextNode("Sitting on the Edge");
-  }
-  //    0 correct: Ultimate failure
-  else
-  {
-    var content = document.createTextNode("Ultimate failure");
-  }
-
-  theDiv.appendChild(content);
+  return total;
 }
 
 function checkAnswer1()
