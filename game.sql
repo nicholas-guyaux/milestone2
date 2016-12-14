@@ -3,12 +3,12 @@ CREATE DATABASE game;
 
 \c game;
 
-CREATE TABLE games (
-  ID SERIAL PRIMARY KEY,
-  title VARCHAR,
-  blogdate VARCHAR,
-  entry VARCHAR
-);
+CREATE TABLE scores(
+  id INT(8) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(10) NOT NULL DEFAULT 'Anonymous' PRIMARY KEY,
+    score INT(5) UNSIGNED NOT NULL DEFAULT '0',
+    ts TIMESTAMP NOT NULL DEFAULT GETDATE()
+)
 
-INSERT INTO games (title, blogdate, entry)
-  VALUES ('First entry', '21 Nov 2016', 'This is the first blog post');
+INSERT INTO scores (name, score)
+  VALUES ('Nick', 15);

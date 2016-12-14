@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var pgp = require('pg-promise')();
-var db = pgp('postgres://postgres:a@localhost:5432/blog');
+var db = pgp(process.env.DATABASE_URL);
 
 // this is to serve the css and js from the public folder to your app
 // it's a little magical, but essentially you put files in there and link
@@ -33,10 +33,10 @@ app.use( function( req, res, next ) {
 });
 
 // gettting all the blogs
-app.get('/', function(req, res, next){
-  db.any('SELECT * FROM blogs')
+app.get('/scores/scores', function(req, res, next){
+  db.any('SELECT * FROM scores')
     .then(function(data){
-      return res.render('index', {blogs: data})
+      return res.render('scores', {scores: data})
     })
     .catch(function(err){
       return next(err);
@@ -44,11 +44,11 @@ app.get('/', function(req, res, next){
 });
 
 //add new blog
-app.get('/blogs/new', function(req, res, next){
+app.get('/scores/login', function(req, res, next){
   res.render('new');
 });
 
-app.post('/blogs/new', function(req, res, next){
+app.post('/scores/new', function(req, res, next){
   db.none('insert into blogs(title, blogdate, entry)' +
      'values(${title}, ${blogdate}, ${entry})',
    req.body)
@@ -84,7 +84,7 @@ app.post('/blogs/:id/edit', function(req, res, next){
 });
 
 //show blog
-app.get('/blogs/:id/', function(req, res, next){
+app.get('/scores/:id/', function(req, res, next){
   var id = parseInt(req.params.id);
   db.one('select * from blogs where id = $1', id)
     .then(function (blog) {
@@ -107,6 +107,6 @@ app.delete('/blogs/:id', function(req, res, next){
     });
 });
 
-app.listen(3000, function(){
+app.listen(process.env.PORT, function(){
   console.log('Application running on localhost on port 3000');
 });
