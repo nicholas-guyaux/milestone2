@@ -26,6 +26,10 @@ app.get('/', function(req, res, next){
   res.render('index');
 });
 
+app.post('/scores/login', function(req, res, next){
+  res.render('game');
+});
+
 //play the game
 app.get('/scores/game', function(req, res, next){
   res.render('game');

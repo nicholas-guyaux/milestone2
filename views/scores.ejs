@@ -13,15 +13,14 @@
           <th>Name</th>
           <th>Score</th>
         </tr>
-        <% games.forEach(function(game){ %>
+        <% scores.forEach(function(game){ %>
           <tr>
-            <td><a href='/games/<%=blog.id %>'><%= game.name %></a></td>
-            <td><%= game.id %></td>
+            <td><%= game.name %></td>
             <td><%= game.score %></td>
           </tr>
         <% }); %>
       </table>
-      <a href="/games/game">Retry</a>
+      <a href="/scores/game">Retry</a>
     </div>
   </body>
 </html>
