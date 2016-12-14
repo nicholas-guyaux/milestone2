@@ -8,7 +8,6 @@
   <body>
     <div class="container">
       <h1>High Scores</h1>
-
       <table>
         <tr>
           <th>Name</th>
@@ -21,7 +20,10 @@
           </tr>
         <% }); %>
       </table>
-      <a href="/scores/game">Retry</a>
+      <form class="" action="/retry" method="get">
+        <input type="submit" value="Retry" />
+      </form>
+
     </div>
   </body>
 </html>

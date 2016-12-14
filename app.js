@@ -5,6 +5,8 @@ var pgp = require('pg-promise')();
 var db = pgp(process.env.DATABASE_URL);
 var game = require('./js/game.js');
 
+var username;
+
 // this is to serve the css and js from the public folder to your app
 // it's a little magical, but essentially you put files in there and link
 // to them in you head of your files with css/styles.css
@@ -27,12 +29,13 @@ app.get('/', function(req, res, next){
   res.render('index');
 });
 
+// play the game
 app.get('/game', function(req, res, next){
-  var username = req.body.name;
+  username = req.body.name;
   res.render('game', {username: username});
 });
 
-//play the game
+// gettting all the scores
 app.post('/game', function(req, res, next){
   var quiz_scores = game.checkAnswers(req.body);
   db.none('insert into scores(name, score)' +
@@ -54,6 +57,11 @@ app.get('/scores', function(req, res, next){
     .catch(function(err){
       return next(err);
     });
+});
+
+// retry the game
+app.get('/retry', function(req, res, next){
+  res.render('game', {username: username});
 });
 
 app.listen(process.env.PORT, function(){
