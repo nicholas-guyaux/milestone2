@@ -9,8 +9,9 @@
     <div class="container">
       <h1>Quiz Challenge</h1>
       <br/>
-      <form class="" action="/scores/game" method="post">
+      <form class="" action="/game" method="post">
         <input type="hidden" name="username" value={username} />
+
         <p class="question">1. In object oriented design of software which of the following is not true?</p>
         <ul class="answers">
         <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">objects inherit the properties of the class</label><br/>
@@ -172,8 +173,9 @@
         </ul>
         <br/>
 
-
-        <input type="submit" value="Submit" />
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
       </form>
 
     </div>

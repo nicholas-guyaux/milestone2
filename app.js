@@ -35,12 +35,12 @@ app.get('/game', function(req, res, next){
 });
 
 //play the game
-app.post('/scores/game', function(req, res, next){
-  var score = game.total(req.body);
+app.post('/game', function(req, res, next){
+  var quiz_scores = game.total(req.body);
   db.none('insert into scores(name, score)' +
-     'values(${req.body.username}, ${score})')
+     'values(${req.body.username}, ${quiz_scores})')
    .then(function () {
-     res.redirect('/scores/scores');
+     res.redirect('/scores');
    })
    .catch(function (err) {
      return next(err);
@@ -48,7 +48,7 @@ app.post('/scores/game', function(req, res, next){
 });
 
 // gettting all the scores
-app.get('/scores/scores', function(req, res, next){
+app.get('/scores', function(req, res, next){
   db.any('SELECT * FROM scores')
     .then(function(data){
       return res.render('scores', {scores: data})
