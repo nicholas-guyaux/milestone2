@@ -6,8 +6,26 @@ CREATE DATABASE game;
 CREATE TABLE scores (
   ID SERIAL PRIMARY KEY,
   name VARCHAR,
-  score VARCHAR
+  score INT NOT NULL
 );
 
 INSERT INTO scores (name, score)
-  VALUES ('Nick', '15');
+  VALUES ('', 0);
+INSERT INTO scores (name, score)
+  VALUES ('', 0);
+INSERT INTO scores (name, score)
+  VALUES ('', 0);
+INSERT INTO scores (name, score)
+  VALUES ('', 0);
+INSERT INTO scores (name, score)
+  VALUES ('', 0);
+INSERT INTO scores (name, score)
+  VALUES ('', 0);
+INSERT INTO scores (name, score)
+  VALUES ('', 0);
+INSERT INTO scores (name, score)
+  VALUES ('', 0);
+INSERT INTO scores (name, score)
+  VALUES ('', 0);
+INSERT INTO scores (name, score)
+  VALUES ('', 0);
