@@ -3,16 +3,27 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Login</title>
+    <title>Scores</title>
   </head>
   <body>
     <div class="container">
-      <h1>Log-in</h1>
+      <h1>High Scores</h1>
       <form class="" action="/game" method="get">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
+          </tr>
+          <% scores.forEach(function(game){ %>
+            <tr>
+              <td><%= game.name %></td>
+              <td><%= game.score %></td>
+            </tr>
+          <% }); %>
+        </table>
         <p>
           <input type="text" name="name" value="" placeholder="Enter Name" />
         </p>
-
         <p>
           <input type="submit" value="Play" />
         </p>

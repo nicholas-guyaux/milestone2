@@ -27,7 +27,13 @@ app.use(bodyParser.json())
 
 // get the username
 app.get('/', function(req, res, next){
-  res.render('index');
+  db.any('SELECT * FROM scores ORDER BY score DESC LIMIT 10')
+    .then(function(data){
+      return res.render('index', {scores: data})
+    })
+    .catch(function(err){
+      return next(err);
+    });
 });
 
 // play the game
@@ -40,30 +46,14 @@ app.get('/game', function(req, res, next){
 app.post('/game', function(req, res, next){
   //var quiz_scores = scoreTotal.checkAnswers(req.form);
   db.none('insert into scores(name, score)' +
-     'values(${username}, ${score})',
+     'values(${username}, ${score)})',
    req.body)
    .then(function () {
-     res.redirect('/scores');
+     res.redirect('/');
    })
    .catch(function (err) {
      return next(err);
    });
-});
-
-// gettting all the scores
-app.get('/scores', function(req, res, next){
-  db.any('SELECT NULLIF(*) FROM scores ORDER BY score')
-    .then(function(data){
-      return res.render('scores', {scores: data})
-    })
-    .catch(function(err){
-      return next(err);
-    });
-});
-
-// retry the game
-app.get('/retry', function(req, res, next){
-  res.render('game', {username: username});
 });
 
 app.listen(process.env.PORT, function(){
