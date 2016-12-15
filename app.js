@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname+'/views');
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
@@ -37,7 +37,7 @@ app.get('/game', function(req, res, next){
 
 // gettting all the scores
 app.post('/game', function(req, res, next){
-  var quiz_scores = scoreTotal.getScoreTotal(req.body);
+  var quiz_scores = scoreTotal.checkAnswers(req.body);
   db.none('insert into scores(name, score)' +
      'values(${req.body.username}, ${quiz_scores})')
    .then(function () {

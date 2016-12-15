@@ -1,30 +1,15 @@
 // 1. Ask the user 20 questions and get their input and store as score
 //document.getElementById("quiz-button").onclick = function() {checkAnswers()};
 
-module.exports = {
+
   getScoreTotal = function(data)
   {
     var totalScore = checkAnswers('answer')
     return totalScore;
-  },
+  };
 
-  checkAnswers = function(radio_name)
-  {
-    var total = 0;
-    oRadio = document.forms[0].elements[radio_name];
-    for(var i = 0; i < oRadio.length; i++) {
-      if(oRadio[i].checked) {
-        total += oRadio[i].value;
-      }
-    }
-    return total;
-  }
-};
-
-
-
-/*
-};
+checkAnswers = function(data)
+{
   // 2. Keep track of the number of questions that are answered correctly
   var total = checkAnswer1(data) + checkAnswer2(data) + checkAnswer3(data) + checkAnswer4(data) + checkAnswer5(data)
    + checkAnswer6(data) + checkAnswer7(data) + checkAnswer8(data) + checkAnswer9(data) + checkAnswer10(data)
@@ -38,7 +23,7 @@ module.exports = {
   //    All 5 correct: Complete Success
 
   return total;
-}
+};
 
 function checkAnswer1(data)
 {
@@ -159,5 +144,3 @@ function checkAnswer20(data)
   if(data.getElementById("q20d").checked) return 1;
   else return 0;
 }
-*/
-module.exports.checkAnswers = checkAnswers;
