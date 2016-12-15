@@ -1,3 +1,4 @@
+require('dotenv').load();
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -19,7 +20,7 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname+'/views');
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 
 // parse application/json
 app.use(bodyParser.json())
@@ -37,9 +38,10 @@ app.get('/game', function(req, res, next){
 
 // gettting all the scores
 app.post('/game', function(req, res, next){
-  var quiz_scores = scoreTotal.checkAnswers(req.body);
+  //var quiz_scores = scoreTotal.checkAnswers(req.form);
   db.none('insert into scores(name, score)' +
-     'values(${req.body.username}, ${quiz_scores})')
+     'values(${username}, ${score})',
+   req.body)
    .then(function () {
      res.redirect('/scores');
    })

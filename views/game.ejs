@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
+    <script script type="text/javascript" src="./js/game.js"></script>
     <title>Quiz Challenge</title>
   </head>
   <body>
     <div class="container">
       <h1>Quiz Challenge</h1>
       <br/>
-      <form class="" action="/game" method="post">
+      <form class="" name="game-form" action="/game" method="post" onsubmit="this.score.value=checkAnswers(this.form)">
         <input type="hidden" name="username" value={username} />
 
         <p class="question">1. In object oriented design of software which of the following is not true?</p>
@@ -174,6 +175,7 @@
         <br/>
 
         <p>
+          <input type="hidden" name="score" />
           <input type="submit" value="Submit" />
         </p>
       </form>

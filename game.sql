@@ -6,8 +6,8 @@ CREATE DATABASE game;
 CREATE TABLE scores (
   ID SERIAL PRIMARY KEY,
   name VARCHAR,
-  score INT NOT NULL
+  score VARCHAR
 );
 
 INSERT INTO scores (name, score)
-  VALUES ('Nick', 15);
+  VALUES ('Nick', '15');
