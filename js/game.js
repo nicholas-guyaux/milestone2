@@ -1,23 +1,22 @@
 // 1. Ask the user 20 questions and get their input and store as score
 //document.getElementById("quiz-button").onclick = function() {checkAnswers()};
-module.exports = {
-  checkAnswers = function(data)
-  {
-    // 2. Keep track of the number of questions that are answered correctly
-    var total = checkAnswer1(data) + checkAnswer2(data) + checkAnswer3(data) + checkAnswer4(data) + checkAnswer5(data)
-     + checkAnswer6(data) + checkAnswer7(data) + checkAnswer8(data) + checkAnswer9(data) + checkAnswer10(data)
-     + checkAnswer11(data) + checkAnswer12(data) + checkAnswer13(data) + checkAnswer14(data) + checkAnswer15(data)
-     + checkAnswer16(data) + checkAnswer17(data) + checkAnswer18(data) + checkAnswer19(data) + checkAnswer20(data);
 
-    // 3. Write out a message to the user to let them know the number of questions that were correct
-    alert("You answered " + total + " questions correctly.");
+checkAnswers = function(data)
+{
+  // 2. Keep track of the number of questions that are answered correctly
+  var total = checkAnswer1(data) + checkAnswer2(data) + checkAnswer3(data) + checkAnswer4(data) + checkAnswer5(data)
+   + checkAnswer6(data) + checkAnswer7(data) + checkAnswer8(data) + checkAnswer9(data) + checkAnswer10(data)
+   + checkAnswer11(data) + checkAnswer12(data) + checkAnswer13(data) + checkAnswer14(data) + checkAnswer15(data)
+   + checkAnswer16(data) + checkAnswer17(data) + checkAnswer18(data) + checkAnswer19(data) + checkAnswer20(data);
 
-    // 4. Output a message to the element with a quiz-result id the user depending on their score
-    //    All 5 correct: Complete Success
+  // 3. Write out a message to the user to let them know the number of questions that were correct
+  alert("You answered " + total + " questions correctly.");
 
-    return total;
-  }
-};
+  // 4. Output a message to the element with a quiz-result id the user depending on their score
+  //    All 5 correct: Complete Success
+
+  return total;
+}
 
 function checkAnswer1(data)
 {
@@ -138,3 +137,5 @@ function checkAnswer20(data)
   if(data.getElementById("q20d").checked) return 1;
   else return 0;
 }
+
+module.exports.checkAnswers = checkAnswers;
