@@ -37,7 +37,7 @@ app.get('/game', function(req, res, next){
 
 // gettting all the scores
 app.post('/game', function(req, res, next){
-  var quiz_scores = scoreTotal.checkAnswers(req.body);
+  var quiz_scores = scoreTotal.getScoreTotal(req.body.form);
   db.none('insert into scores(name, score)' +
      'values(${req.body.username}, ${quiz_scores})')
    .then(function () {
