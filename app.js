@@ -27,7 +27,7 @@ app.use(bodyParser.json())
 
 // get the username
 app.get('/', function(req, res, next){
-  db.any('SELECT * FROM scores ORDER BY score DESC LIMIT 10')
+  db.any('SELECT * FROM scores ORDER BY score DESC')
     .then(function(data){
       return res.render('index', {scores: data})
     })
