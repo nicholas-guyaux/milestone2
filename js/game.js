@@ -12,7 +12,7 @@ module.exports = {
       }
     }
     console.log(value);
-    return parseInt(value);
+    return value;
     /*
     // 2. Keep track of the number of questions that are answered correctly
     var total = checkAnswer1(data) + checkAnswer2(data) + checkAnswer3(data) + checkAnswer4(data) + checkAnswer5(data)
