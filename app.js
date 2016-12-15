@@ -4,7 +4,6 @@ var app = express();
 var bodyParser = require('body-parser');
 var pgp = require('pg-promise')();
 var db = pgp(process.env.DATABASE_URL);
-var scoreTotal = require('./js/game.js');
 
 var username;
 
@@ -44,7 +43,6 @@ app.get('/game', function(req, res, next){
 
 // gettting all the scores
 app.post('/game', function(req, res, next){
-  //var quiz_scores = scoreTotal.checkAnswers(req.form);
   db.none('insert into scores(name, score)' +
      'values(${username}, ${score)})',
    req.body)
