@@ -10,172 +10,172 @@
     <div class="container">
       <h1>Quiz Challenge</h1>
       <br/>
-      <form class="" name="game-form" action="/game" method="post" onsubmit="this.score.value=checkAnswers(this.form)">
+      <form class="" action="/game" method="post" onsubmit="this.score.value=checkAnswers(this.form)">
         <input type="hidden" name="username" value={username} />
 
         <p class="question">1. In object oriented design of software which of the following is not true?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q1a"><label for="q1a">objects inherit the properties of the class</label><br/>
-        <input type="radio" name="answer" value=0 id="q1b"><label for="q1b">classes are defined based on the attributes of the object</label><br/>
-        <input type="radio" name="answer" value=1 id="q1c"><label for="q1c">objects can belong to two classes</label><br/>
-        <input type="radio" name="answer" value=0 id="q1d"><label for="q1d">classes are always different</label><br/><br/>
+        <input type="radio" name="q1a" value=0 id="q1a"><label for="q1a">objects inherit the properties of the class</label><br/>
+        <input type="radio" name="q1b" value=0 id="q1b"><label for="q1b">classes are defined based on the attributes of the object</label><br/>
+        <input type="radio" name="q1a" value=1 id="q1c"><label for="q1c">objects can belong to two classes</label><br/>
+        <input type="radio" name="q1d" value=0 id="q1d"><label for="q1d">classes are always different</label><br/><br/>
         </ul>
 
         <p class="question">2. A computer checks the------ of user names and password for a match before granting access.</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q2a"><label for="q2a">website</label><br/>
-        <input type="radio" name="answer" value=1 id="q2b"><label for="q2b">database</label><br/>
-        <input type="radio" name="answer" value=0 id="q2c"><label for="q2c">network</label><br/>
-        <input type="radio" name="answer" value=0 id="q2d"><label for="q2d">backup file</label><br/><br/>
+        <input type="radio" name="q2a" value=0 id="q2a"><label for="q2a">website</label><br/>
+        <input type="radio" name="q2b" value=1 id="q2b"><label for="q2b">database</label><br/>
+        <input type="radio" name="q2c" value=0 id="q2c"><label for="q2c">network</label><br/>
+        <input type="radio" name="q2d" value=0 id="q2d"><label for="q2d">backup file</label><br/><br/>
         </ul>
 
         <p class="question">3. Linked list are not suitable data structure of which one of the following problems ?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q3a"><label for="q3a">Insertion sort</label><br/>
-        <input type="radio" name="answer" value=1 id="q3b"><label for="q3b">Binary search</label><br/>
-        <input type="radio" name="answer" value=0 id="q3c"><label for="q3c">Radix sort</label><br/>
-        <input type="radio" name="answer" value=0 id="q3d"><label for="q3d">Polynomial manipulation</label><br/><br/>
+        <input type="radio" name="q3a" value=0 id="q3a"><label for="q3a">Insertion sort</label><br/>
+        <input type="radio" name="q3b" value=1 id="q3b"><label for="q3b">Binary search</label><br/>
+        <input type="radio" name="q3c" value=0 id="q3c"><label for="q3c">Radix sort</label><br/>
+        <input type="radio" name="q3d" value=0 id="q3d"><label for="q3d">Polynomial manipulation</label><br/><br/>
         </ul>
 
         <p class="question">4. The number of possible ordered trees with three nodes A,B,C is?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q4a"><label for="q4a">16</label><br/>
-        <input type="radio" name="answer" value=1 id="q4b"><label for="q4b">12</label><br/>
-        <input type="radio" name="answer" value=0 id="q4c"><label for="q4c">6</label><br/>
-        <input type="radio" name="answer" value=0 id="q4d"><label for="q4d">10</label><br/><br/>
+        <input type="radio" name="q4a" value=0 id="q4a"><label for="q4a">16</label><br/>
+        <input type="radio" name="q4b" value=1 id="q4b"><label for="q4b">12</label><br/>
+        <input type="radio" name="q4c" value=0 id="q4c"><label for="q4c">6</label><br/>
+        <input type="radio" name="q4d" value=0 id="q4d"><label for="q4d">10</label><br/><br/>
         </ul>
 
         <p class="question">5. Which of the following algorithm design technique is used in the quick sort algorithm?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q5a"><label for="q5a">Dynamic programming</label><br/>
-        <input type="radio" name="answer" value=0 id="q5b"><label for="q5b">Backtracking</label><br/>
-        <input type="radio" name="answer" value=1 id="q5c"><label for="q5c">Divide and conquer</label><br/>
-        <input type="radio" name="answer" value=0 id="q5d"><label for="q5d">Greedy method</label><br/><br/>
+        <input type="radio" name="q5a" value=0 id="q5a"><label for="q5a">Dynamic programming</label><br/>
+        <input type="radio" name="q5b" value=0 id="q5b"><label for="q5b">Backtracking</label><br/>
+        <input type="radio" name="q5c" value=1 id="q5c"><label for="q5c">Divide and conquer</label><br/>
+        <input type="radio" name="q5d" value=0 id="q5d"><label for="q5d">Greedy method</label><br/><br/>
         </ul>
 
         <p class="question">6. The number of swapping needed to sort numbers 8,22,7,9,31,19,5,13 in ascending order using bubble sort is ?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q6a"><label for="q6a">11</label><br/>
-        <input type="radio" name="answer" value=0 id="q6b"><label for="q6b">12</label><br/>
-        <input type="radio" name="answer" value=0 id="q6c"><label for="q6c">13</label><br/>
-        <input type="radio" name="answer" value=1 id="q6d"><label for="q6d">14</label><br/><br/>
+        <input type="radio" name="q6a" value=0 id="q6a"><label for="q6a">11</label><br/>
+        <input type="radio" name="q6b" value=0 id="q6b"><label for="q6b">12</label><br/>
+        <input type="radio" name="q6c" value=0 id="q6c"><label for="q6c">13</label><br/>
+        <input type="radio" name="q6d" value=1 id="q6d"><label for="q6d">14</label><br/><br/>
         </ul>
 
         <p class="question">7. Which of the following statement is true ?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=1 id="q7a"><label for="q7a">Optimal binary search tree construction can be performed efficiently using dynamic programming.</label><br/>
-        <input type="radio" name="answer" value=0 id="q7b"><label for="q7b">Breath first search cannot be used to find converted components of a graph.</label><br/>
-        <input type="radio" name="answer" value=0 id="q7c"><label for="q7c">Given the prefix and post fix walks over a binary tree.The binary tree cannot be uniquely constructe</label><br/>
-        <input type="radio" name="answer" value=0 id="q7d"><label for="q7d">Depth first search can be used to find connected components of a graph.</label><br/><br/>
+        <input type="radio" name="q7a" value=1 id="q7a"><label for="q7a">Optimal binary search tree construction can be performed efficiently using dynamic programming.</label><br/>
+        <input type="radio" name="q7b" value=0 id="q7b"><label for="q7b">Breath first search cannot be used to find converted components of a graph.</label><br/>
+        <input type="radio" name="q7c" value=0 id="q7c"><label for="q7c">Given the prefix and post fix walks over a binary tree.The binary tree cannot be uniquely constructe</label><br/>
+        <input type="radio" name="q7d" value=0 id="q7d"><label for="q7d">Depth first search can be used to find connected components of a graph.</label><br/><br/>
         </ul>
 
         <p class="question">8. Given two sorted lists of size m and n respectively.The number of comparisons needed in the worst case by the merge sort algorithm will be?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q8a"><label for="q8a">mn</label><br/>
-        <input type="radio" name="answer" value=0 id="q8b"><label for="q8b">max(m,n)</label><br/>
-        <input type="radio" name="answer" value=0 id="q8c"><label for="q8c">min(m,n)</label><br/>
-        <input type="radio" name="answer" value=1 id="q8d"><label for="q8d">m+n-1</label><br/><br/>
+        <input type="radio" name="q8a" value=0 id="q8a"><label for="q8a">mn</label><br/>
+        <input type="radio" name="q8b" value=0 id="q8b"><label for="q8b">max(m,n)</label><br/>
+        <input type="radio" name="q8c" value=0 id="q8c"><label for="q8c">min(m,n)</label><br/>
+        <input type="radio" name="q8d" value=1 id="q8d"><label for="q8d">m+n-1</label><br/><br/>
         </ul>
 
         <p class="question">9. Merge sort uses ?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=1 id="q9a"><label for="q9a">Divide and conquer strategy</label><br/>
-        <input type="radio" name="answer" value=0 id="q9b"><label for="q9b">Backtracking approach</label><br/>
-        <input type="radio" name="answer" value=0 id="q9c"><label for="q9c">Heuristic search</label><br/>
-        <input type="radio" name="answer" value=0 id="q9d"><label for="q9d">Greedy approach</label><br/><br/>
+        <input type="radio" name="q9a" value=1 id="q9a"><label for="q9a">Divide and conquer strategy</label><br/>
+        <input type="radio" name="q9b" value=0 id="q9b"><label for="q9b">Backtracking approach</label><br/>
+        <input type="radio" name="q9c" value=0 id="q9c"><label for="q9c">Heuristic search</label><br/>
+        <input type="radio" name="q9d" value=0 id="q9d"><label for="q9d">Greedy approach</label><br/><br/>
         </ul>
 
         <p class="question">10. The following sequence of operation is performed on stack : push(1),push(2),pop,push(1),push(2),pop,pop,pop,push(2),pop. The sequence of popped out values are ?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=1 id="q10a"><label for="q10a">2,2,1,1,2</label><br/>
-        <input type="radio" name="answer" value=0 id="q10b"><label for="q10b">2,2,1,2,2</label><br/>
-        <input type="radio" name="answer" value=0 id="q10c"><label for="q10c">2,1,2,2,1</label><br/>
-        <input type="radio" name="answer" value=0 id="q10d"><label for="q10d">2,1,2,2,2</label><br/><br/>
+        <input type="radio" name="q10a" value=1 id="q10a"><label for="q10a">2,2,1,1,2</label><br/>
+        <input type="radio" name="q10b" value=0 id="q10b"><label for="q10b">2,2,1,2,2</label><br/>
+        <input type="radio" name="q10c" value=0 id="q10c"><label for="q10c">2,1,2,2,1</label><br/>
+        <input type="radio" name="q10d" value=0 id="q10d"><label for="q10d">2,1,2,2,2</label><br/><br/>
         </ul>
 
         <p class="question">11. Which of the following algorithm design technique is used in the quick sort algorithm?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q11a"><label for="q11a">Dynamic programming</label><br/>
-        <input type="radio" name="answer" value=0 id="q11b"><label for="q11b">Backtracking</label><br/>
-        <input type="radio" name="answer" value=1 id="q11c"><label for="q11c">Divide and conquer</label><br/>
-        <input type="radio" name="answer" value=0 id="q11d"><label for="q11d">Greedy method</label><br/><br/>
+        <input type="radio" name="q11a" value=0 id="q11a"><label for="q11a">Dynamic programming</label><br/>
+        <input type="radio" name="q11b" value=0 id="q11b"><label for="q11b">Backtracking</label><br/>
+        <input type="radio" name="q11c" value=1 id="q11c"><label for="q11c">Divide and conquer</label><br/>
+        <input type="radio" name="q11d" value=0 id="q11d"><label for="q11d">Greedy method</label><br/><br/>
         </ul>
 
         <p class="question">12. Which of the following is useful in traversing a given graph by breadth first search?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q12a"><label for="q12a">Stack</label><br/>
-        <input type="radio" name="answer" value=0 id="q12b"><label for="q12b">Set</label><br/>
-        <input type="radio" name="answer" value=0 id="q12c"><label for="q12c">List</label><br/>
-        <input type="radio" name="answer" value=1 id="q12d"><label for="q12d">Queue</label><br/><br/>
+        <input type="radio" name="q12a" value=0 id="q12a"><label for="q12a">Stack</label><br/>
+        <input type="radio" name="q12b" value=0 id="q12b"><label for="q12b">Set</label><br/>
+        <input type="radio" name="q12c" value=0 id="q12c"><label for="q12c">List</label><br/>
+        <input type="radio" name="q12d" value=1 id="q12d"><label for="q12d">Queue</label><br/><br/>
         </ul>
 
         <p class="question">13. What is 5 + 4?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q13a"><label for="q13a">7</label><br/>
-        <input type="radio" name="answer" value=0 id="q13b"><label for="q13b">5</label><br/>
-        <input type="radio" name="answer" value=1 id="q13c"><label for="q13c">9</label><br/>
-        <input type="radio" name="answer" value=0 id="q13d"><label for="q13d">8</label><br/><br/>
+        <input type="radio" name="q13a" value=0 id="q13a"><label for="q13a">7</label><br/>
+        <input type="radio" name="q13b" value=0 id="q13b"><label for="q13b">5</label><br/>
+        <input type="radio" name="q13c" value=1 id="q13c"><label for="q13c">9</label><br/>
+        <input type="radio" name="q13d" value=0 id="q13d"><label for="q13d">8</label><br/><br/>
         </ul>
 
         <p class="question">14. Which one is NOT a primary color?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q14a"><label for="q14a">Red</label><br/>
-        <input type="radio" name="answer" value=0 id="q14b"><label for="q14b">Blue</label><br/>
-        <input type="radio" name="answer" value=1 id="q14c"><label for="q14c">Green</label><br/>
-        <input type="radio" name="answer" value=0 id="q14d"><label for="q14d">Yellow</label><br/><br/>
+        <input type="radio" name="q14a" value=0 id="q14a"><label for="q14a">Red</label><br/>
+        <input type="radio" name="q14b" value=0 id="q14b"><label for="q14b">Blue</label><br/>
+        <input type="radio" name="q14c" value=1 id="q14c"><label for="q14c">Green</label><br/>
+        <input type="radio" name="q14d" value=0 id="q14d"><label for="q14d">Yellow</label><br/><br/>
         </ul>
 
         <p class="question">15. What is the slope? Y=5X+12</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q15a"><label for="q15a">7</label><br/>
-        <input type="radio" name="answer" value=1 id="q15b"><label for="q15b">5</label><br/>
-        <input type="radio" name="answer" value=0 id="q15c"><label for="q15c">12</label><br/>
-        <input type="radio" name="answer" value=0 id="q15d"><label for="q15d">8</label><br/><br/>
+        <input type="radio" name="q15a" value=0 id="q15a"><label for="q15a">7</label><br/>
+        <input type="radio" name="q15b" value=1 id="q15b"><label for="q15b">5</label><br/>
+        <input type="radio" name="q15c" value=0 id="q15c"><label for="q15c">12</label><br/>
+        <input type="radio" name="q15d" value=0 id="q15d"><label for="q15d">8</label><br/><br/>
         </ul>
 
         <p class="question">16. What is the number 14 in binary?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q16a"><label for="q16a">00111</label><br/>
-        <input type="radio" name="answer" value=0 id="q16b"><label for="q16b">10101</label><br/>
-        <input type="radio" name="answer" value=1 id="q16c"><label for="q16c">01110</label><br/>
-        <input type="radio" name="answer" value=0 id="q16d"><label for="q16d">11100</label><br/><br/>
+        <input type="radio" name="q16a" value=0 id="q16a"><label for="q16a">00111</label><br/>
+        <input type="radio" name="q16b" value=0 id="q16b"><label for="q16b">10101</label><br/>
+        <input type="radio" name="q16c" value=1 id="q16c"><label for="q16c">01110</label><br/>
+        <input type="radio" name="q16d" value=0 id="q16d"><label for="q16d">11100</label><br/><br/>
         </ul>
 
         <p class="question">17. What is the number 9 in binary?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=1 id="q17a"><label for="q17a">01001</label><br/>
-        <input type="radio" name="answer" value=0 id="q17b"><label for="q17b">00101</label><br/>
-        <input type="radio" name="answer" value=0 id="q17c"><label for="q17c">00011</label><br/>
-        <input type="radio" name="answer" value=0 id="q17d"><label for="q17d">00110</label><br/><br/>
+        <input type="radio" name="q17a" value=1 id="q17a"><label for="q17a">01001</label><br/>
+        <input type="radio" name="q17b" value=0 id="q17b"><label for="q17b">00101</label><br/>
+        <input type="radio" name="q17c" value=0 id="q17c"><label for="q17c">00011</label><br/>
+        <input type="radio" name="q17d" value=0 id="q17d"><label for="q17d">00110</label><br/><br/>
         </ul>
 
         <p class="question">18. What is the number 28 in binary?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q18a"><label for="q18a">11010</label><br/>
-        <input type="radio" name="answer" value=0 id="q18b"><label for="q18b">10101</label><br/>
-        <input type="radio" name="answer" value=0 id="q18c"><label for="q18c">00111</label><br/>
-        <input type="radio" name="answer" value=1 id="q18d"><label for="q18d">11100</label><br/><br/>
+        <input type="radio" name="q18a" value=0 id="q18a"><label for="q18a">11010</label><br/>
+        <input type="radio" name="q18b" value=0 id="q18b"><label for="q18b">10101</label><br/>
+        <input type="radio" name="q18c" value=0 id="q18c"><label for="q18c">00111</label><br/>
+        <input type="radio" name="q18d" value=1 id="q18d"><label for="q18d">11100</label><br/><br/>
         </ul>
 
         <p class="question">19. What is the number 21 in binary?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q19a"><label for="q19a">11100</label><br/>
-        <input type="radio" name="answer" value=0 id="q19b"><label for="q19b">10011</label><br/>
-        <input type="radio" name="answer" value=1 id="q19c"><label for="q19c">10101</label><br/>
-        <input type="radio" name="answer" value=0 id="q19d"><label for="q19d">10110</label><br/><br/>
+        <input type="radio" name="q19a" value=0 id="q19a"><label for="q19a">11100</label><br/>
+        <input type="radio" name="q19b" value=0 id="q19b"><label for="q19b">10011</label><br/>
+        <input type="radio" name="q19c" value=1 id="q19c"><label for="q19c">10101</label><br/>
+        <input type="radio" name="q19d" value=0 id="q19d"><label for="q19d">10110</label><br/><br/>
         </ul>
 
         <p class="question">20. What is the number 16 in binary?</p>
         <ul class="answers">
-        <input type="radio" name="answer" value=0 id="q20a"><label for="q20a">01000</label><br/>
-        <input type="radio" name="answer" value=0 id="q20b"><label for="q20b">00001</label><br/>
-        <input type="radio" name="answer" value=0 id="q20c"><label for="q20c">00100</label><br/>
-        <input type="radio" name="answer" value=1 id="q20d"><label for="q20d">10000</label><br/><br/>
+        <input type="radio" name="q20a" value=0 id="q20a"><label for="q20a">01000</label><br/>
+        <input type="radio" name="q20b" value=0 id="q20b"><label for="q20b">00001</label><br/>
+        <input type="radio" name="q20c" value=0 id="q20c"><label for="q20c">00100</label><br/>
+        <input type="radio" name="q20d" value=1 id="q20d"><label for="q20d">10000</label><br/><br/>
         </ul>
         <br/>
 
         <p>
-          <input type="hidden" name="score" />
+          <input type="hidden" name="score"/ />
           <input type="submit" value="Submit" />
         </p>
       </form>
