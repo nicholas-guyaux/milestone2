@@ -42,9 +42,9 @@ app.get('/game', function(req, res, next){
 
 // gettting all the scores
 app.post('/game', function(req, res, next){
+  var topScore =  parseInt(req.body.score);
   db.none('insert into scores(name, score)' +
-     'values(${username}, ${score)})',
-   req.body)
+     'values(req.body.username, topScore)')
    .then(function () {
      res.redirect('/');
    })

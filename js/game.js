@@ -1,141 +1,141 @@
 // 1. Ask the user 20 questions and get their input and store as score
 //document.getElementById("quiz-button").onsubmit = function() {checkAnswers()};
+module.exports = {
+  checkAnswers: function()
+  {
+  debugger;
+    // 2. Keep track of the number of questions that are answered correctly
+    var total = checkAnswer1() + checkAnswer2() + checkAnswer3() + checkAnswer4() + checkAnswer5()
+     + checkAnswer6() + checkAnswer7() + checkAnswer8() + checkAnswer9() + checkAnswer10()
+     + checkAnswer11() + checkAnswer12() + checkAnswer13() + checkAnswer14() + checkAnswer15()
+     + checkAnswer16() + checkAnswer17() + checkAnswer18() + checkAnswer19() + checkAnswer20();
 
-function checkAnswers()
-{
-debugger;
-  // 2. Keep track of the number of questions that are answered correctly
-  var total = checkAnswer1() + checkAnswer2() + checkAnswer3() + checkAnswer4() + checkAnswer5()
-   + checkAnswer6() + checkAnswer7() + checkAnswer8() + checkAnswer9() + checkAnswer10()
-   + checkAnswer11() + checkAnswer12() + checkAnswer13() + checkAnswer14() + checkAnswer15()
-   + checkAnswer16() + checkAnswer17() + checkAnswer18() + checkAnswer19() + checkAnswer20();
+    // 3. Write out a message to the user to let them know the number of questions that were correct
+    alert("You answered " + total + " questions correctly.");
 
-  // 3. Write out a message to the user to let them know the number of questions that were correct
-  alert("You answered " + total + " questions correctly.");
+    // 4. Output a message to the element with a quiz-result id the user depending on their score
+    //    All 5 correct: Complete Success
+    return total;
 
-  // 4. Output a message to the element with a quiz-result id the user depending on their score
-  //    All 5 correct: Complete Success
-  return total;
-
+  }
 };
 
 
-
-function checkAnswer1(data)
+function checkAnswer1()
 {
   if(document.getElementById("q1c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer2(data)
+function checkAnswer2()
 {
   if(document.getElementById("q2b").checked) return 1;
   else return 0;
 }
 
-function checkAnswer3(data)
+function checkAnswer3()
 {
   if(document.getElementById("q3b").checked) return 1;
   else return 0;
 }
 
-function checkAnswer4(data)
+function checkAnswer4()
 {
   if(document.getElementById("q4b").checked) return 1;
   else return 0;
 }
 
-function checkAnswer5(data)
+function checkAnswer5()
 {
   if(document.getElementById("q5c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer6(data)
+function checkAnswer6()
 {
   if(document.getElementById("q6d").checked) return 1;
   else return 0;
 }
 
-function checkAnswer7(data)
+function checkAnswer7()
 {
   if(document.getElementById("q7a").checked) return 1;
   else return 0;
 }
 
-function checkAnswer8(data)
+function checkAnswer8()
 {
   if(document.getElementById("q8d").checked) return 1;
   else return 0;
 }
 
-function checkAnswer9(data)
+function checkAnswer9()
 {
   if(document.getElementById("q9a").checked) return 1;
   else return 0;
 }
 
-function checkAnswer10(data)
+function checkAnswer10()
 {
   if(document.getElementById("q10a").checked) return 1;
   else return 0;
 }
 
-function checkAnswer11(data)
+function checkAnswer11()
 {
   if(document.getElementById("q11c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer12(data)
+function checkAnswer12()
 {
   if(document.getElementById("q12d").checked) return 1;
   else return 0;
 }
 
-function checkAnswer13(data)
+function checkAnswer13()
 {
   if(document.getElementById("q13c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer14(data)
+function checkAnswer14()
 {
   if(document.getElementById("q14c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer15(data)
+function checkAnswer15()
 {
   if(document.getElementById("q15b").checked) return 1;
   else return 0;
 }
 
-function checkAnswer16(data)
+function checkAnswer16()
 {
   if(document.getElementById("q16c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer17(data)
+function checkAnswer17()
 {
   if(document.getElementById("q17a").checked) return 1;
   else return 0;
 }
 
-function checkAnswer18(data)
+function checkAnswer18()
 {
   if(document.getElementById("q18d").checked) return 1;
   else return 0;
 }
 
-function checkAnswer19(data)
+function checkAnswer19()
 {
   if(document.getElementById("q19c").checked) return 1;
   else return 0;
 }
 
-function checkAnswer20(data)
+function checkAnswer20()
 {
   if(document.getElementById("q20d").checked) return 1;
   else return 0;

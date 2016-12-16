@@ -4,13 +4,23 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
     <title>Quiz Challenge</title>
+
+    <script language="javascript">
+      function setValue(sum){
+        document.getElementById("totalScore").value = toString(sum);
+      }
+    </script>
   </head>
   <body>
+    <script type="text/javascript">
+    var total = 0;
+    </script>
     <div class="container">
       <h1>Quiz Challenge</h1>
       <br/>
-      <form class="" action="/game" method="post" onsubmit="this.score.value=checkAnswers();">
+      <form class="" action="/game" name ="quizForm" method="post" >
         <input type="hidden" name="username" value={username} />
+        <input type="hidden" id="totalScore" name="score" />
 
         <p class="question">1. In object oriented design of software which of the following is not true?</p>
         <ul class="answers">
@@ -108,6 +118,7 @@
         <input type="radio" name="q12d" value="1" id="q12d"><label for="q12d">Queue</label><br/><br/>
         </ul>
 
+
         <p class="question">13. What is 5 + 4?</p>
         <ul class="answers">
         <input type="radio" name="q13a" value="0" id="q13a"><label for="q13a">7</label><br/>
@@ -116,6 +127,7 @@
         <input type="radio" name="q13d" value="0" id="q13d"><label for="q13d">8</label><br/><br/>
         </ul>
 
+
         <p class="question">14. Which one is NOT a primary color?</p>
         <ul class="answers">
         <input type="radio" name="q14a" value="0" id="q14a"><label for="q14a">Red</label><br/>
@@ -123,6 +135,7 @@
         <input type="radio" name="q14c" value="1" id="q14c"><label for="q14c">Green</label><br/>
         <input type="radio" name="q14d" value="0" id="q14d"><label for="q14d">Yellow</label><br/><br/>
         </ul>
+
 
         <p class="question">15. What is the slope? Y=5X+12</p>
         <ul class="answers">
@@ -173,9 +186,14 @@
         </ul>
         <br/>
 
+
         <p>
-          <input type="hidden" name="score"  />
-          <input type="submit" value="Submit" />
+          <input type="button" value="Lock Answers" onclick="total=checkAnswers();" />
+        </p>
+
+        <p>
+          
+          <input type="submit" value="Submit" onclick="this.score.value=toString(total);" />
         </p>
       </form>
 
