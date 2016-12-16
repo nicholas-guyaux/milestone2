@@ -7,6 +7,7 @@ var db = pgp(process.env.DATABASE_URL);
 
 var totalScore = require('./js/game.js');
 
+var app.local.username;
 
 // this is to serve the css and js from the public folder to your app
 // it's a little magical, but essentially you put files in there and link
@@ -38,7 +39,8 @@ app.get('/', function(req, res, next){
 
 // play the game
 app.get('/game', function(req, res, next){
-  res.render('game', {name: req.body.name});
+  app.local.username = req.body.name;
+  res.render('game');
 });
 
 // gettting all the scores
@@ -47,7 +49,7 @@ app.post('/game', function(req, res, next){
   var topScore =  checkAnswers(req.body);
   db.none('insert into scores(name, score)' +
      'values($1, $2)',
-   [req.body.name, topScore])
+   [username, topScore])
    .then(function () {
      res.redirect('/');
    })

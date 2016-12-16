@@ -9,11 +9,6 @@ checkAnswers=function(data)
    + checkAnswer11(data) + checkAnswer12(data) + checkAnswer13(data) + checkAnswer14(data) + checkAnswer15(data)
    + checkAnswer16(data) + checkAnswer17(data) + checkAnswer18(data) + checkAnswer19(data) + checkAnswer20(data);
 
-  // 3. Write out a message to the user to let them know the number of questions that were correct
-  //alert("You answered " + total + " questions correctly.");
-
-  // 4. Output a message to the element with a quiz-result id the user depending on their score
-  //    All 5 correct: Complete Success
   return total;
 
 };
