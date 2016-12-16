@@ -5,7 +5,6 @@ var bodyParser = require('body-parser');
 var pgp = require('pg-promise')();
 var db = pgp(process.env.DATABASE_URL);
 
-var username;
 
 // this is to serve the css and js from the public folder to your app
 // it's a little magical, but essentially you put files in there and link
@@ -37,7 +36,7 @@ app.get('/', function(req, res, next){
 
 // play the game
 app.get('/game', function(req, res, next){
-  username = req.body.name;
+  var username = req.body.name;
   res.render('game', {username: username});
 });
 
