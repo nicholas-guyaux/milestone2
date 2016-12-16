@@ -5,6 +5,8 @@ var bodyParser = require('body-parser');
 var pgp = require('pg-promise')();
 var db = pgp(process.env.DATABASE_URL);
 
+var totalScore = require('./js/game.js');
+
 
 // this is to serve the css and js from the public folder to your app
 // it's a little magical, but essentially you put files in there and link
@@ -18,7 +20,7 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname+'/views');
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
@@ -36,15 +38,16 @@ app.get('/', function(req, res, next){
 
 // play the game
 app.get('/game', function(req, res, next){
-  var username = req.body.name;
-  res.render('game', {username: username});
+  res.render('game', {name: req.body.name});
 });
 
 // gettting all the scores
 app.post('/game', function(req, res, next){
-  var topScore =  parseInt(req.body.score);
+  console.log(req.body);
+  var topScore =  checkAnswers(req.body);
   db.none('insert into scores(name, score)' +
-     'values(req.body.username, topScore)')
+     'values($1, $2)',
+   [req.body.name, topScore])
    .then(function () {
      res.redirect('/');
    })
